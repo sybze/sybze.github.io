@@ -1,0 +1,14 @@
+---
+title: "Assignment 1"
+author: "Stephan Bartelheim"
+date: "March 12, 2018"
+output: html_document
+---
+## 21.03.2018 - Top Cities in the World
+
+```{r, echo=F, message=F}
+library(leaflet)
+library(dplyr)
+map1<-leaflet() %>% addTiles() %>% addMarkers(lat=31.103196, lng=121.449600, popup = "Shanghai <br> most popolous city") %>% addMarkers(lat=1.346946, lng=103.838056, popup = "Singapore <br> most expensive city") %>% addMarkers(lat=48.200924, lng=16.361511, popup="Vienna <br> highest quality of life") %>% addMarkers(lat=10.469036 , lng=-66.899306 , popup="Caracas <br> highest murder rate") %>% addMarkers(lat=47.380921, lng=8.540146, popup="Zurich <br> highest per capita income")
+map1
+```
